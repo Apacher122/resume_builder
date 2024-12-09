@@ -1,5 +1,5 @@
 ## **Instructions:**
-# *Requirements: OpenAI API key, Docker, Node.JS*
+*Requirements: OpenAI API key, Docker, Node.JS*
 
 1. Create "config" directory in project root.
 2. Add a .env file in the newly created "config" directory.
