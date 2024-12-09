@@ -1,6 +1,7 @@
 import { OpenAI } from 'openai';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { experienceResponse, skillsResponse } from '../models/resumeItems.js';
+import { logger } from '../utils/logger.js';
 
 const apiKey = process.env.OPENAI_API_KEY;
 if (!apiKey) {
@@ -28,7 +29,7 @@ export const messageOpenAI = async(prompt, zodFormat) => {
         } else if (response.refusal) {
             throw new Error('OpenAI said it no no wanna :/');
         }
-        console.log(`Response: ${response.parsed}`);
+        logger.info(`Response: ${response.parsed}`);
     } catch (error) {
         console.error(`OpenAI API call error: ${error.message}`);
           // Handle edge cases

@@ -4,6 +4,7 @@ import { messageOpenAI } from '../services/openaiServices.js';
 import { experienceResponse, skillsResponse } from '../models/resumeItems.js';
 import { fileURLToPath } from 'url';
 import fs, { promises as fsPromises } from 'fs';
+import { logger, generateLog } from './logger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.join(__dirname, `..`, `latex`, `resume`);
@@ -15,6 +16,10 @@ export const optimizeExperience = async() => {
   const jobJson = await readFile(jobJsonFilePath, 'utf-8');
   const parsedResumeData = JSON.parse(resumeJson);
   const parsedJobData = JSON.parse(jobJson);
+
+  const jobPosting = path.resolve(__dirname, `../../data/jobPosting.txt`);
+  const jobPostingContent = await readFile(jobPosting, 'utf-8');
+
   let latexContent;
   try {
     latexContent = await fsPromises.readFile(`${filePath}/experience.tex`, 'utf8');
@@ -41,10 +46,31 @@ export const optimizeExperience = async() => {
     Description of job I am applying for: ${JSON.stringify(parsedJobData)}
   `;
 
-  const response = await messageOpenAI(prompt, experienceResponse);
+  const prompt2 = `
+  Make adjustments for each position I held in my JSON-formatted resume to better match a job description.
+  Optimize it for ATS.
+
+  Rules:
+  You are allowed to remove or rephrase any "responsibilities" or "description" item for each position held if it is
+  redundant, wordy, annoying, clichè, and/or irrelevant.
+  You are not allowed to remove experiences, only descriptions/responsibilities.
+  You may infer/suggest new "responsibilities" or "description" bullet points based off current experience.
+  Provide justification for changes.
+  There must be at least 4 "responsibilities" or "description" items for each position.
+  Do not exceed the optimal amount of "responsibilities" or "description" items for each position..
+  DO NOT LIE.
+
+  My resume as a JSON: ${JSON.stringify(parsedResumeData)}\n\n
+  Description of job I am applying for: ${jobPostingContent}
+`;
+
+  const response = await messageOpenAI(prompt2, experienceResponse);
   const experiences = response.experiences;
 
   const temp = response.experiences.map(generateExperienceSection);
+
+  logger.info(response.experiences.map(generateLog));
+
   const newEntries = replaceCventries(latexContent, temp)
   try {
     await fsPromises.writeFile(`${filePath}/experience.tex`, newEntries, 'utf-8');
@@ -146,22 +172,3 @@ const replaceCventries = (texContent, cventries) => {
     texContent.slice(endIndex + cventriesEnd.length)
   );
 };
-
-const getLatexContent = async(regex, file) => {
-  try {
-    let latexContent = await fsPromises.readFile(`${filePath}/${file}.tex`, 'utf8');
-    const match = latexContent.match(regex);
-    return match ? match[1].trim() : null;
-  } catch (error) {
-    console.error(`Error reading ${file}.tex: ${error.message}`);
-    return null;
-  }
-}
-
-const updateLatexContent = async(regex, file) => {
-  try {
-    let latexContent = await fsPromises.readFile(`${filePath}/${file}.tex`, 'utf8'); 
-  } catch (error) {
-    console.error(`Error reading ${file}.tex: ${error.message}`);
-  }
-}

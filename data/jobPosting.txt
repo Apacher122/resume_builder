@@ -1,0 +1,120 @@
+Company: Cloudflare
+Position: Sponsored Brands, Advertiser & Partner Experience, SB APEX 
+Description:
+About Us
+
+At Cloudflare, we are on a mission to help build a better Internet. Today the company runs one of the world’s largest networks that powers millions of websites and other Internet properties for customers ranging from individual bloggers to SMBs to Fortune 500 companies. Cloudflare protects and accelerates any Internet application online without adding hardware, installing software, or changing a line of code. Internet properties powered by Cloudflare all have web traffic routed through its intelligent global network, which gets smarter with every request. As a result, they see significant improvement in performance and a decrease in spam and other attacks. Cloudflare was named to Entrepreneur Magazine’s Top Company Cultures list and ranked among the World’s Most Innovative Companies by Fast Company.
+
+We realize people do not fit into neat boxes. We are looking for curious and empathetic individuals who are committed to developing themselves and learning new skills, and we are ready to help you do that. We cannot complete our mission without building a diverse and inclusive team. We hire the best people based on an evaluation of their potential and support them throughout their time at Cloudflare. Come join us!
+
+Available Locations: Remote - US
+
+About The Team
+
+Cloudflare helps build the future of the Internet. We started Cloudflare to solve one half of every IT organization's challenge: how do you ensure the resources and infrastructure that you expose to the Internet are safe from attack, fast, and reliable. We saw that the world was moving away from hardware and software to solve these problems and instead wanted a scalable service that would work around the world. To deliver that, we built one of the world's largest networks. Today our network spans more than 250 cities worldwide and is within milliseconds of nearly everyone connected to the Internet. We have built the capacity to stand up to nation-state scale cyberattacks and a threat intelligence system powered by the immense amount of Internet traffic that we see.
+
+We are now expanding Cloudflare’s product offerings to solve the other half of every IT organization's challenge: ensuring the people and teams within an organization can access the tools they need to do their jobs and are safe from malware and other online threats.
+
+To do that, we released Cloudflare Zero Trust Platform, a Zero Trust platform built on Cloudflare’s network to secure users, devices, and data in organizations of any size. Cloudflare for Teams consists of multiple products that deliver a comprehensive solution. Those products include
+
+Cloudflare Access, built to replace VPNs and protect internally-managed applications.
+Cloudflare Tunnel, the best way to connect your infrastructure to Cloudflare in a secure way.
+Cloudflare Gateway, a tool that keeps team members protected from malware and other threats on the Internet.
+The Cloudflare Zero Trust Agent, the secure on-ramp for your traffic to the Internet.
+Cloudflare Browser Isolation, the Internet’s fastest browser isolation technology
+
+
+What You'll Do
+
+In this role, you’ll help us build Cloudflare Browser Isolation, a secure remote browsing platform that protects users from security threats on the Internet. As an engineer on the Browser Isolation team, you will focus on designing, building, and scaling our Chromium-based distributed browsing engine. You will also contribute to the control plane that enables distributed Chromium-based browsers to deliver low-latency remote browsing for our users at scale across our global anycast network. You will solve problems of massive scale and significance, shaping the future of secure web browsing on the Internet.
+
+Technologies we use:
+
+Our client is written in WebAssembly, Typescript, and WebGL
+Our remote streaming technology is based on WebRTC and Skia (read our blog to learn more)
+Our remote browser is based on Chromium and developed in C++
+For our orchestration layer we use Nomad, Consul, Cloudflare Workers, Kubernetes, Go and Typescript
+
+
+Examples Of Desirable Skills, Knowledge And Experience
+
+Members of the Browser Isolation team contribute to all areas of the product. These include everything from making patches to Chromium, orchestrating tasks at the edge, and working on our build infrastructure. We’re looking for engineers at all levels who are excited to work broadly across our technology and service stack.
+
+5 or more years of relevant experience required
+Experience coding in Go and Typescript
+Experience coding in C++ or Rust
+Comfortable working under Linux environment and command-line tools
+Distributed task orchestration systems such as Nomad or Kubernetes
+Systems-level debugging and performance optimization
+Ability to effectively navigate, understand, and contribute to large codebases
+Solid foundation in computer science, with strong knowledge in building large, distributed systems
+Strong communication skills - ability to explain complex concepts in a simple language
+
+
+Bonus Points
+
+Experience working in low-latency real time environments such as remote computer streaming, game engine architecture, high frequency trading, etc. 
+Experience working on a major browser engine, browser extensions or similar technologies
+Strong competencies in algorithms and data structures
+Deep-level understanding on network technologies such as UDP, WebRTC, PeerJS etc.
+Natural interest or experience in security products and security protocols
+
+
+Compensation
+
+Compensation may be adjusted depending on work location and level.
+
+Estimated annual salary of $137,000 - $240,000 USD
+
+
+Equity
+
+This role is eligible to participate in Cloudflare’s equity plan.
+
+Benefits
+
+Cloudflare offers a complete package of benefits and programs to support you and your family. Our benefits programs can help you pay health care expenses, support caregiving, build capital for the future and make life a little easier and fun! The below is a description of our benefits for employees in the United States, and benefits may vary for employees based outside the U.S.
+
+Health & Welfare Benefits
+
+Medical/Rx Insurance
+Dental Insurance
+Vision Insurance
+Flexible Spending Accounts
+Commuter Spending Accounts
+Fertility & Family Forming Benefits
+On-demand mental health support and Employee Assistance Program
+Global Travel Medical Insurance
+
+
+Financial Benefits
+
+Short and Long Term Disability Insurance
+Life & Accident Insurance
+401(k) Retirement Savings Plan
+Employee Stock Participation Plan
+
+
+Time Off
+
+Flexible paid time off covering vacation and sick leave
+Leave programs, including parental, pregnancy health, medical, and bereavement leave
+
+
+What Makes Cloudflare Special?
+
+We’re not just a highly ambitious, large-scale technology company. We’re a highly ambitious, large-scale technology company with a soul. Fundamental to our mission to help build a better Internet is protecting the free and open Internet.
+
+Project Galileo: We equip politically and artistically important organizations and journalists with powerful tools to defend themselves against attacks that would otherwise censor their work, technology already used by Cloudflare’s enterprise customers--at no cost.
+
+Athenian Project: We created Athenian Project to ensure that state and local governments have the highest level of protection and reliability for free, so that their constituents have access to election information and voter registration.
+
+1.1.1.1: We released 1.1.1.1 to help fix the foundation of the Internet by building a faster, more secure and privacy-centric public DNS resolver. This is available publicly for everyone to use - it is the first consumer-focused service Cloudflare has ever released. Here’s the deal - we don’t store client IP addresses never, ever. We will continue to abide by our privacy commitment and ensure that no user data is sold to advertisers or used to target consumers.
+
+Sound like something you’d like to be a part of? We’d love to hear from you!
+
+This position may require access to information protected under U.S. export control laws, including the U.S. Export Administration Regulations. Please note that any offer of employment may be conditioned on your authorization to receive software or technology controlled under these U.S. export laws without sponsorship for an export license.
+
+Cloudflare is proud to be an equal opportunity employer. We are committed to providing equal employment opportunity for all people and place great value in both diversity and inclusiveness. All qualified applicants will be considered for employment without regard to their, or any other person's, perceived or actual race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, national origin, ancestry, citizenship, age, physical or mental disability, medical condition, family care status, or any other basis protected by law. We are an AA/Veterans/Disabled Employer.
+
+Cloudflare provides reasonable accommodations to qualified individuals with disabilities. Please tell us if you require a reasonable accommodation to apply for a job. Examples of reasonable accommodations include, but are not limited to, changing the application process, providing documents in an alternate format, using a sign language interpreter, or using specialized equipment. If you require a reasonable accommodation to apply for a job, please contact us via e-mail at hr@cloudflare.com or via mail at 101 Townsend St. San Francisco, CA 94107.

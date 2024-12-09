@@ -8,7 +8,7 @@ const main = async () => {
   } catch (error) {
     console.error(`Error during resume compilation: ${error.message}`);
   }
-  console.log("End of process");
+  console.log("End of process.\nTo view information about changes, check /logs/info.logs");
 }
 
 main();

@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { optimizeExperience } from "./latexEditor.js"
 import fs from 'fs';
+import { logger } from './logger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,8 +19,11 @@ export const compile_resume = async () => {
   // Path to your .tex file
   const texFilePath = validatePath(path.join(__dirname, `..`, `latex`, `resume.tex`));
   const outputDir = validatePath(path.join(__dirname, `..`, `output`));
-  const command = `xelatex -output-directory=${outputDir} ${texFilePath}`;
-  cleanup(outputDir);
+  const logDir = validatePath(path.join(__dirname, `..`, `logs`));
+  
+  // Purge logs and temporary files
+  cleanup(outputDir, logDir);
+  
   try {
     await optimizeExperience();
     // await optimizeSkills();
@@ -39,11 +43,11 @@ export const compile_resume = async () => {
     ]);
 
     latex.stdout.on('data', (data) => {
-      console.log(data.toString());
+      logger.verbose(data.toString());
     });
 
     latex.stderr.on('data', (data) => {
-      console.error(data.toString());
+      logger.error(data.toString());
     });
 
     latex.on('close', (code) => {
@@ -56,7 +60,16 @@ export const compile_resume = async () => {
   });
 };
 
-const cleanup = (outputDir) => {
+const cleanup = (outputDir, logDir) => {
+  // Remove old logs
+  const oldLogs = fs.readdirSync(logDir);
+  oldLogs.forEach(log => {
+    const logPath = path.join(logDir, log);
+    if (fs.statSync(logPath).isFile()) {
+      fs.unlinkSync(logPath);
+    }
+  });
+
   // Clean up temporary files
   const extensions = ['.aux', '.log', '.out'];
   extensions.forEach(ext => {
