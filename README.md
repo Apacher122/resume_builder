@@ -17,7 +17,11 @@ I'm working on this tool for my own job search to help me optimize my resume for
 2. Add a .env file in the newly created "config" directory.
     - In this .env file, add the following:
         ```OPENAI_API_KEY = # Your Openai API key.```
-3. In your editor's terminal (or whatever terminal you're using) run the following:
+3. In ./data/ there are a couple files for you to edit:
+    - job.json: Job description in json format (optional)
+    - jobPosting.txt: Job details (Company name, about, etc).
+    - resume.json: Your resume in a json format (gonna change this up to make it easier).
+4. In your editor's terminal (or whatever terminal you're using) run the following:
     ```
     docker compose build
     docker compose up
