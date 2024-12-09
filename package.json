@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "latex.js": "^0.12.6",
+    "node-latex": "^3.1.0",
+    "openai": "^4.71.1",
+    "zod": "^3.23.8"
+  }
+}

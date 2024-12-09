@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./output:/usr/src/app/src/output
+    working_dir: /usr/src/app/src
+    env_file:
+      - ./config/.env
+    environment:
+      - NODE_ENV=development

@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# Build and output directories
+dist/
+build/
+output/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Compiled LaTeX files
+*.aux
+*.log
+*.out
+*.toc
+
+# Environment files
+.env

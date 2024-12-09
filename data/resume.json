@@ -1,0 +1,130 @@
+{
+    "name": "Rey Christopher D. Aparece",
+    "title": "Columbia University CS '23 · Software Engineer · Veteran",
+    "contact": {
+      "locations": ["New York, NY", "Houston, TX"],
+      "phone": "(346) 664-1678",
+      "email": "rcda.civ@gmail.com",
+      "github": "https://github.com/ApacheR122",
+      "linkedin": "https://www.linkedin.com/in/rcda"
+    },
+    "education": {
+      "institution": "Columbia University",
+      "location": "New York, NY",
+      "degree": "B.A. in Computer Science",
+      "track": "Software Systems Track",
+      "dates": "Jul. 2020 - May. 2023",
+      "coursework": [
+        "Data Structures & Algorithms",
+        "Computer Organization & Architecture",
+        "Programming Languages & Translators",
+        "Distributed Systems",
+        "Operating Systems",
+        "Intro to Databases",
+        "Advanced Databases",
+        "Cloud Computing",
+        "Computer Networks",
+        "Advanced Programming"
+      ]
+    },
+    "technical_skills": {
+      "programming_languages": ["Python", "JavaScript", "Kotlin", "Swift", "C++", "C#", "C", "Java", "GoLang"],
+      "databases": ["MS SQL", "MySQL", "PostgreSQL"],
+      "web_development_frameworks": ["Express", "Django", "Flask"],
+      "cloud_platforms": ["AWS", "GCP", "Microsoft Azure"],
+      "devops_tools": ["Azure DevOps", "Jenkins", "Git", "GitHub", "Docker"],
+      "other_tools": ["Splunk", "Confluence", "Visual Studio", "IntelliJ IDEA", "Postman", "Jira"]
+    },
+    "experience": [
+      {
+        "title": "Software Development Engineer",
+        "company": "WEX Health",
+        "location": "US, Remote",
+        "dates": "Jul. 2023 - Aug. 2024",
+        "responsibilities": [
+          "Developed iOS applications using Swift and Objective-C, improving user engagement by 15% through the implementation of MVVM and MVC design patterns.",
+          "Increased unit test coverage by 35%, leading to a 40% reduction in critical errors passing through the CI/CD pipeline, enhancing code stability and reducing build failures.",
+          "Optimized development workflows using Microsoft Azure, Figma, Jenkins, and other tools.",
+          "Leveraged tools such as Microsoft Azure, Figma, Jenkins, Google Workspace, and Splunk to optimize development workflows, reducing time spent on integration tasks by 15% and improving team collaboration.",
+          "Applied QA expertise to ensure code resiliency while developing new mobile features, contributing to overall product stability.",
+          "Demonstrated flexibility by contributing to back-end development and quality assurance (QA) tasks, supporting cross-functional team efforts.",
+          "Collaborated with Visa to integrate PCI-compliant card provisioning, enhancing mobile platform security and scalability",
+          "Monitored and resolved production issues using Splunk, minimizing downtime and improving user satisfaction",
+          "Partnered with cross-functional teams to optimize back-end integration and boost app performance, ensuring smooth deployment.",
+          "Managed deployments and automated build processes with Azure DevOps, accelerating feature delivery and integration.",
+          "Enhanced CI/CD efficiency by boosting unit test coverage by 35% and reducing build failures by 20%, improving pipeline reliability.",
+          "Developed high-performance iOS applications in Swift and Objective-C, driving a 15% increase in user engagement through optimized UI/UX."
+        ]
+      },
+      {
+        "title": "Software Engineer Intern",
+        "company": "WEX Health",
+        "location": "US, Remote",
+        "dates": "Sep. 2022 - Jul. 2023",
+        "responsibilities": [
+          "Developed and implemented a test automation suite using Python and Selenium.",
+          "Created C# test scripts to identify bugs in the WEX Partner Benefit Analytics portal.",
+          "Automated performance testing with Python.",
+          "Tested and validated stored procedures and data integrity in MS SQL Server.",
+          "Contributed to Agile/SCRUM processes for faster releases.",
+          "Created and automated a testing suite using Python and Selenium, reducing manual testing by 30% and increasing feature scalability and reliability.",
+          "Wrote test scripts in C# to identify and resolve API performance issues, supporting a seamless experience across the WEX Partner Benefit Ana-lytics portal",
+          "Automated performance testing with Python, comparing Pre-Prod and Prod environments to improve stability and deployment reliability.",
+          "Enhanced database validation processes, ensuring 99% accuracy in stored procedure outputs and ELT data management, aligned with SQL Server.",
+          "Gained hands-on experience with software testing, Agile/SCRUM, and the CI/CD pipeline, contributing to faster feature releases and higher software quality."
+        ]
+      },
+      {
+        "title": "Base Expeditionary Targeting and Surveillance Systems Operator and Team Leader",
+        "company": "United States Army",
+        "location": "Various Locations (CONUS, OCONUS)",
+        "dates": "Apr. 2014 - Apr. 2020",
+        "responsibilities": [
+          "Managed aerial/ground targeting and surveillance systems in Somalia.",
+          "Integrated Ageon ISR software for real-time intelligence.",
+          "Automated scanning with RAID system sensors.",
+          "Received the Army Achievement Medal for leadership and technical expertise.",
+          "Hand-picked to manage aerial/ground targeting and surveillance systems while forward-deployed to Somalia",
+          "Integrated Ageon ISR software with the BETSS-C system to provide real-time intelligence using geospatial data, spatial analysis tools, and sensor integration for enhanced surveillance.",
+          "Automated scanning with RAID system sensors to provide passive surveillance and strategic intelligence to all on-field assets.",
+          "Awarded the Army Achievement Medal for technical expertise, leadership, and performance while serving as a team leader during Operation Enduring Freedom - Horn of Africa."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "IoT-Based Smart Energy Management Tool",
+        "role": "Individual Developer",
+        "status": "In active development",
+        "description": [
+          "Built a real-time energy monitoring system using Node.js, Python, Home Assistant REST API, and ESP microcontrollers.",
+          "Analyzed energy data to identify and address energy loss.",
+          "Automated HVAC optimization with smart thermostats.",
+          "Reduced monthly utility costs by 55%."
+        ]
+      },
+      {
+        "name": "QuackieChattie (Android and iOS)",
+        "role": "Individual Developer",
+        "status": "2022-2023",
+        "description": [
+          "Developed a multi-user chatroom-based communication application for both Android and iOS using Swift and Kotlin.",
+          "Created a Node.js server using the Express.js web app framework and deployed it to Heroku.",
+          "Designed a Heroku PostgreSQL database to handle data using a simple and effective ERD.",
+          "Utilized Firebase and Google Sign-In SDKs to handle user login and authorization workflow."
+        ]
+      },
+      {
+        "name": "DNYF: Study Buddies",
+        "role": "Microservices Developer",
+        "status": "2022",
+        "description": [
+          "Collaborative development of a group study web application catered to Columbia University students, published on AWS Cloud Front.",
+          "Implemented the Microservices architecture with REST APIs, utilizing Node.js, Express.js, Python, Vue, and MySQL.",
+          "Utilized Docker to build and deploy microservices to AWS EC2",
+          "Developed a User microservice to manage and process new/existing user profiles using an AWS MySQL RDB"
+        ]
+      }
+    ]
+}
+  
