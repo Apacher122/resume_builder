@@ -4,101 +4,68 @@
 
 ### Company: WEX Health
 
-* Engineered advanced iOS applications using Swift and Objective-C, elevating user engagement through optimized MVC and MVVM designs to drive a 15% increase in usage.
-***Justification: Rephrased to emphasize engineering and user engagement metrics, focusing on relevant skills for Cloudflare's performance metrics.***
+* Developed high-performance iOS applications in Swift and Objective-C, enhancing user engagement by 15%.<br>
+***Justification: Condensed and clarified the point to focus on key metrics and effectiveness without redundancy.***
 
-* Enhanced CI/CD pipeline efficiency by 35% through improved unit test coverage, diminishing critical errors and stabilizing product releases.
-***Justification: Reduced redundancy and emphasized stakeholder value in product reliability, relevant to Cloudflare's performance metrics.***
+* Enhanced CI/CD pipeline by improving unit test coverage by 35%, which reduced deployment errors significantly during critical releases.<br>
+***Justification: Focused the point on CI/CD outcomes that align more with Cloudflare's emphasis on reliable system performance.***
 
-* Automated development workflows utilizing Microsoft Azure and Jenkins, significantly reducing task complexity and fostering enhanced collaboration within the team.
-***Justification: Focused on automation and teamwork, ensuring alignment with collaborative environments valued by Cloudflare.***
+* Streamlined development workflows via tools like Azure and Jenkins, cutting integration task times by 15% and boosting team collaboration.<br>
+***Justification: Slightly rephrased to emphasize productivity and teamwork, which are essential in Cloudflare's environment.***
 
-* Partnered with cross-functional teams to refine back-end integrations, resulting in superior app performance and security enhancements for client data.
-***Justification: Framed integration work in terms of performance and security to align with Cloudflare's focus on secure, high-performance applications.***
+* Coordinated back-end features to optimize app performance and security, ensuring efficient deployment through streamlined processes.<br>
+***Justification: Broadened the focus to cover back-end contributions, aligning with system-level and performance optimization experiences.***
 
 ## Position: Software Engineer Intern
 
 ### Company: WEX Health
 
-* Developed a scalable test automation suite using Python and Selenium, achieving a 30% reduction in manual testing efforts while ensuring high software quality.
-***Justification: Optimized wording to emphasize scalability and efficiency, key metrics relevant to Cloudflare's engineering practices.***
+* Developed a robust test automation suite using Python and Selenium, effectively reducing manual testing by 30% and improving release reliability.<br>
+***Justification: Emphasized the impact of automation on reliability and efficiency, appealing to Cloudflare's focus on robust systems.***
 
-* Authored C# test scripts for identifying critical API performance issues, bolstering the WEX Partner Benefit Analytics portal's reliability and user experience.
-***Justification: Focused on performance metrics and user experience, aligning with Cloudflare's dedication to exceptional service delivery.***
+* Created C# test scripts to identify and resolve API performance issues, facilitating smoother user experiences for the WEX Partner Analytics portal.<br>
+***Justification: Shifted the focus towards user benefits, reinforcing the importance of performance for end users.***
 
-* Automated extensive database validations ensuring 99% accuracy in SQL stored procedures, directly enhancing overall data integrity of applications.
-***Justification: Emphasized data integrity and quality assurance, crucial aspects of secure development practices that resonate with Cloudflare’s objectives.***
+* Implemented automated performance tests with Python, ensuring stable deployment through comparative analysis between environments.<br>
+***Justification: Clarified the role of performance testing in ensuring quality and stability on deployments, relevant to Cloudflare's needs.***
 
-* Participated in Agile/SCRUM methodologies, contributing to rapid prototyping and iterative releases, vital for delivering high-quality software solutions.
-***Justification: Clarified the impact of SCRUM practices on delivery speed and quality, which is essential for Cloudflare’s fast-paced environment.***
+* Participated in Agile/SCRUM methodologies to accelerate product releases, collaborating effectively in a cross-functional team.<br>
+***Justification: Maintained focus on teamwork and Agile practices to resonate with Cloudflare's culture of collaboration and rapid development.***
 
 ## Position: Base Expeditionary Targeting and Surveillance Systems Operator and Team Leader
 
 ### Company: United States Army
 
-* Led teams in managing advanced surveillance systems while deployed, integrating ISR technologies to enhance operational effectiveness in high-pressure environments.
-***Justification: Rephrased to highlight leadership in technology integration, showcasing military experience as beneficial to managing stress at Cloudflare.***
+* Led operations managing aerial targeting and surveillance systems, enhancing intelligence accuracy and operational efficiency on multiple deployments.<br>
+***Justification: Condensed to emphasize leadership and efficiency in high-stakes environments, showcasing relevant experience.***
 
-* Automated real-time data collection and analysis processes for surveillance systems, providing strategic insights that improved mission success rates.
-***Justification: Emphasized automation and strategic insights relevant to system-wide efficiency and operational improvement at Cloudflare.***
+* Integrated advanced ISR software with existing systems, providing actionable intelligence through geospatial analysis and data integration.<br>
+***Justification: Rephrased to highlight technical integration and intelligence delivery, which parallels tasks at Cloudflare.***
 
-* Instrumental in implementing geospatial intelligence methodologies, increasing situational awareness and operational coordination across diverse teams.
-***Justification: Highlighted coordination and intelligence applications, showing capabilities in distributed task orchestration.***
+* Automated surveillance processes using RAID system technology, augmenting real-time intelligence gathering while on field missions.<br>
+***Justification: Focusing the point on automation and real-time data handling aligns it with Cloudflare's tech-driven approach.***
 
-* Awarded the Army Achievement Medal for exceptional leadership and unwavering commitment to operational excellence during critical missions in diverse environments.
-***Justification: Focus on award tied to leadership under pressure, connecting to Cloudflare's value on strong, effective leadership.***
+* Received Army Achievement Medal for distinguished service and technical innovation during critical operations, advocating teamwork and strategic success.<br>
+***Justification: Retained the achievement but improved focus on teamwork and relevance to technical challenges in civil contexts.***
 
 # Changes made to Skills Section
 
-* programming_languages: C++, Python, JavaScript
-***Justification: Prioritize C++ due to its relevance to the Chromium-based browser development in the job description. Python and JavaScript remain as they could be relevant for automation and web development tasks.***
+* Programming Languages: C++, GoLang, Python, JavaScript, Swift<br>
+***Justification: The job description emphasizes experience in C++, Go, and JavaScript, as these are relevant to the Chromium-based distributed browsing engine and remote streaming technology being developed. Swift remains because it showcases my mobile development experience, which may be relevant.***
 
-* cloud_platforms: GCP
-***Justification: Kept GCP as it may relate to distributed systems and cloud architectures, which are relevant in the context of Cloudflare's offerings.***
+* Cloud Platforms: AWS<br>
+***Justification: AWS is mentioned to support understanding of cloud services, which is relevant given Cloudflare's focus on network services and cloud infrastructure.***
 
-* devops_tools: Docker, Git, GitHub, Azure DevOps
-***Justification: Retained only essential tools like Docker, Git, and Azure DevOps that can complement the development process, especially around CI/CD.***
+* DevOps Tools: Docker, Git, GitHub<br>
+***Justification: These tools are essential for deployment and version control in modern software engineering, aligning with the need for collaboration and continuous delivery described in the job.***
 
-* databases: PostgreSQL
-***Justification: Maintained PostgreSQL, a modern database which could be relevant to any backend services that may accompany the job responsibilities.***
+* Web Development Frameworks: Flask, Express<br>
+***Justification: Flask and Express are relevant for creating server-side applications and APIs, indicating a solid understanding of web technologies that support distributed architectures.***
 
-* web_development_frameworks: Express, Django
-***Justification: Express and Django are retained as they show web server and API capabilities, which may be relevant in building and scaling applications.***
-
-* other_tools: Jira
-***Justification: Jira is kept as it's widely used in project management and Agile environments, likely aligning with Cloudflare's development culture.***
+* Databases: PostgreSQL<br>
+***Justification: PostgreSQL is included as it is a widely-used database technology that supports the development of applications, including those that might require integration with large-scale web services.***
 
 # Changes made to Projects Section
-
-## Project: QuackieChattie (Android and iOS)
-
-### Role: Individual Developer
-
-### Status: 2022-2023
-
-* Designed and developed a multi-user chat application for both Android and iOS with Swift and Kotlin, enhancing real-time communication capabilities.
-***Justification: Emphasizes real-time interaction, relevant to Cloudflare's focus on secure communications.***
-
-* Built a scalable server with Node.js using the Express.js framework, deployed on Heroku for efficient management of session data and connections.
-***Justification: Highlights server-side skills and efficiency in deployment, relevant to Cloudflare’s emphasis on distributed systems.***
-
-* Utilized PostgreSQL on Heroku for robust database management, ensuring quick data retrieval that aligns with high-performance app requirements.
-***Justification: Focuses on data handling and performance, which aligns well with Cloudflare’s need for scalable solutions.***
-
-## Project: IoT-Based Smart Energy Management Tool
-
-### Role: Individual Developer
-
-### Status: In active development
-
-* Developed a real-time energy monitoring tool with Node.js, Python, and Home Assistant REST API focusing on optimization for reduced energy costs.
-***Justification: Highlights backend development and the emphasis on monitoring data flows, relevant for Cloudflare's analytics designs.***
-
-* Implemented automated HVAC systems, reducing energy consumption by 55%, demonstrating impact-driven engineering.
-***Justification: Shows commitment to measurable results, which aligns with Cloudflare's goal for impactful technology solutions.***
-
-* Analyzed energy usage data for insights that guide further improvements, showcasing strong analytical and problem-solving skills.
-***Justification: Highlights analytical skills necessary for debugging and performance optimization at Cloudflare.***
 
 ## Project: DNYF: Study Buddies
 
@@ -106,12 +73,33 @@
 
 ### Status: 2022
 
-* Collaborated in the development of a microservices-based study web application, leveraging AWS infrastructure for scalability and performance.
-***Justification: Emphasizes cloud technology and microservices, which are relevant to distributed architecture roles at Cloudflare.***
+* Collaborative development of a web application designed for study groups at Columbia University, enhancing peer learning.<br>***Justification: Emphasizes collaborative development and user experience which aligns with team-based work at Cloudflare.***
 
-* Developed REST APIs using Node.js, Express.js, and Python, supporting robust mobile app functionality and seamless user experience.
-***Justification: Communicates backend service development familiarity, important for roles focused on distributed services at Cloudflare.***
+* Implemented RESTful Microservices architecture utilizing Node.js, Express.js, Python, Vue, and MySQL for efficient data handling.<br>***Justification: Highlights relevant stack and architecture experience, pertinent to building robust web applications.***
 
-* Utilized Docker for containerization in AWS deployment, enhancing the development workflow and operational efficiency.
-***Justification: Shows familiarity with containerization and deployment practices, essential for Cloudflare’s technological stack.***
+* Utilized Docker for smooth deployment of microservices to AWS EC2, enhancing scalability and reliability.<br>***Justification: Applicable to Cloudflare's focus on scalability and multi-environment deployment.***
+
+## Project: IoT-Based Smart Energy Management Tool
+
+### Role: Individual Developer
+
+### Status: In active development
+
+* Engineered a real-time energy monitoring solution using Node.js, Python, and ESP microcontrollers for effective resource management.<br>***Justification: Showcases capability to build real-time, scalable solutions relevant to Cloudflare’s infrastructure.***
+
+* Analyzed energy consumption data to identify loss, applying troubleshooting skills relevant to operational improvements.<br>***Justification: Highlights problem-solving skills and data analysis, relevant in secure browsing scenarios at Cloudflare.***
+
+* Automated HVAC systems to optimize energy expenditure, resulting in a 55% reduction in utility costs, demonstrating efficiency.<br>***Justification: Demonstrates ability to automate processes and achieve significant results, important for developing secure solutions.***
+
+## Project: QuackieChattie (Android and iOS)
+
+### Role: Individual Developer
+
+### Status: 2022-2023
+
+* Developed a cross-platform communication application for Android and iOS using Swift and Kotlin, improving user connectivity.<br>***Justification: Emphasizes teamwork and communication, crucial for a collaborative environment at Cloudflare.***
+
+* Created a Node.js server with Express.js, deployed to Heroku to handle real-time messaging efficiently.<br>***Justification: Showcases relevant backend development and scalability in real-time applications, similar to Cloudflare operations.***
+
+* Designed PostgreSQL database schema to manage data efficiently, aligning with Cloudflare’s focus on data integrity and security.<br>***Justification: Reaffirms database management skills, pertinent to maintaining secure data environments and applications.***
 
