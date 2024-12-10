@@ -32,8 +32,8 @@ This thing requires an OpenAI API key, which does cost some money. Money that on
 Any changes made to your resume will be explained under /logs/info.log
 
 ## Additional Info
-The resume template I'm using: https://github.com/posquit0/Awesome-CV
-Credit for this template goes to Claud D. Park <posquit0.bj@gmail.com>
+Credit for the resume template goes to Claud D. Park <posquit0.bj@gmail.com>
+    - You can view the template here: https://github.com/posquit0/Awesome-CV
 
 ## TODO
 1. Add functionality to showcase relevant skills on resume.
