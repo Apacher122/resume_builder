@@ -1,9 +1,10 @@
 import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { optimizeExperience, optimizeSkills } from "./latex-editor.js"
+import { optimizeExperience, optimizeProjects, optimizeSkills } from "./latex-editor.js"
 import fs from 'fs';
 import { logger } from './logger.js';
+import { makeSinglePage } from '../helpers/resume-pdf-formatter.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -26,6 +27,8 @@ export const compile_resume = async () => {
   try {
     await optimizeExperience();
     await optimizeSkills();
+    await optimizeProjects();
+
   } catch (error) {
     console.error(`Error optimizing resume: ${error.message}\nSee logs for more information`);
     return;
@@ -49,8 +52,10 @@ export const compile_resume = async () => {
       logger.error(`LaTeX Error: ${data.toString()}`);
     });
 
-    latex.on('close', (code) => {
+    latex.on('close', async(code) => {
       if (code === 0) {
+        await makeSinglePage();
+        console.log("Resume compilation successful.\nTo view information about changes, check /output/change-summary.md");
         logger.info('Compilation successful');
         resolve();
       } else {
@@ -58,6 +63,7 @@ export const compile_resume = async () => {
       }
     });
   });
+
 };
 
 const cleanup = (outputDir) => {

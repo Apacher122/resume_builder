@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import { messageOpenAI } from '../services/openai-services.js';
-import { experienceResponse, skillsResponse } from '../models/resume-items.js';
+import { experienceResponse, skillsResponse, projectsResponse } from '../models/resume-items.js';
 import { promises as fsPromises } from 'fs';
 import { logger} from './logger.js';
 import { PROMPTS } from '../constants/prompts.js';
@@ -69,6 +69,34 @@ export const optimizeSkills = async() => {
   }
 }
 
+export const optimizeProjects = async() => {
+  const prompt = PROMPTS.PROJECTS(JSON.stringify(parsedResumeData), jobPostingContent);
+  const response = await messageOpenAI(prompt, projectsResponse);
+  const newContent = response.projects.map(generateProjectsSection);
+
+  let latexContent;
+  try {
+    latexContent = await fsPromises.readFile(LATEX_FILES.PROJECTS, 'utf8');
+  } catch (error) {
+    logger.error(`Error reading from projects.tex: ${error.message}`);
+    throw error;
+  }
+
+  generateChangeReport(response);
+
+  try {
+    const newEntries = replaceCventries(latexContent, newContent);
+    await fsPromises.writeFile(LATEX_FILES.PROJECTS, newEntries, 'utf-8');
+  } catch (error) {
+    if (error instanceof ResumeSectionNotFoundError) {
+      logger.error(`Error replacing cventries: ${error.message}\n\tCheck LaTeX syntax in projects.tex`);
+    } else {
+      logger.error(`Error writing to projects.tex: ${error.message}`);
+    }
+    throw error;
+  }
+};
+
 const generateExperienceSection = ({ position, company, start, end, description }) => {
   const cvItems = description
   .map(
@@ -106,6 +134,28 @@ const generateSkillsSection = ({category, skill}) => {
       {${titleFormat(category)}} % Category
       {${skillList}} % Skills
   `;
+};
+
+const generateProjectsSection = ({ name, role, status, description }) => {
+  const cvItems = description
+  .map(
+    ({ text }) =>
+      `    \\item {${text.replace(/%/g, "\\%").replace(/#/g, "\\#")}}` // Escape '%' for LaTeX
+  )
+  .join("\n");
+
+  return `
+  \\cventry
+    {${role}} % Role
+    {${name}} % Event
+    {} % Location
+    {${status}} % Date(s)
+    {
+      \\begin{cvitems} % Description(s)
+  ${cvItems}
+      \\end{cvitems}
+    }`;
+
 };
 
 const replaceCvSkills = (texContent, cvskills) => { 

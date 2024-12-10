@@ -18,7 +18,6 @@ export const generateChangeReport = (response) => {
             });
         });
     } else if (response.skills) {
-        console.log("checking skill response")
         if (response.skills) {
             content += '# Changes made to Skills Section\n\n';
             response.skills.forEach((skill) => {
@@ -27,6 +26,17 @@ export const generateChangeReport = (response) => {
                 content += `***Justification: ${skill.justification_for_changes}***\n\n`;
             });
         }
+    } else if (response.projects) {
+        content += '# Changes made to Projects Section\n\n';
+        response.projects.forEach((project) => {
+            content += `## Project: ${project.name}\n\n`;
+            content += `### Role: ${project.role}\n\n`;
+            content += `### Status: ${project.status}\n\n`;
+            project.description.forEach((desc) => {
+                content += `* ${desc.text}\n`;
+                content += `***Justification: ${desc.justification_for_change}***\n\n`;
+            });
+        });
     }
 
     appendFileSync(changeReportPath, content);

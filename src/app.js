@@ -1,4 +1,4 @@
-import { compile_resume } from "./utils/compile-latex.js";
+import { compile_resume } from "./utils/build-resume.js";
 
 const main = async () => {
   try {
@@ -8,7 +8,6 @@ const main = async () => {
     console.error(`Error during resume compilation: ${error.message}`);
     return;
   }
-  console.log("Resume compilation successful.\nTo view information about changes, check /output/change-summary.md");
 }
 
 main();

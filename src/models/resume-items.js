@@ -31,3 +31,20 @@ export const skillsResponse = z.object({
         })
     ),
 });
+
+export const projectsResponse = z.object({
+    projects: z.array(
+        z.object({
+            name: z.string(),
+            role: z.string(),
+            status: z.string(),
+            description: z.array(
+                z.object({
+                    text: z.string(),
+                    justification_for_change: z.string(),
+                    is_new_suggestion: z.boolean(),
+                })
+            ),
+        })
+    ),
+});
