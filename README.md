@@ -34,7 +34,7 @@ Any changes made to your resume will be explained under /logs/info.log
 ## Additional Info
 
 Credit for the resume template goes to Claud D. Park <posquit0.bj@gmail.com>  
-    - You can view the template here: https://github.com/posquit0/Awesome-CV
+You can view the template here: https://github.com/posquit0/Awesome-CV
 
 ## TODO
 1. Add functionality to showcase relevant skills on resume.
