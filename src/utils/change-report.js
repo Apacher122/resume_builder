@@ -13,7 +13,7 @@ export const generateChangeReport = (response) => {
             content += `## Position: ${exp.position}\n\n`;
             content += `### Company: ${exp.company}\n\n`;
             exp.description.forEach((desc) => {
-                content += `* ${desc.text}\n`;
+                content += `* ${desc.text}  \n`;
                 content += `***Justification: ${desc.justification_for_change}***\n\n`;
             });
         });
@@ -22,7 +22,7 @@ export const generateChangeReport = (response) => {
             content += '# Changes made to Skills Section\n\n';
             response.skills.forEach((skill) => {
                 const skillItems = skill.skill.map((item) => item.item).join(', ');
-                content += `* ${skill.category}: ${skillItems}\n`;
+                content += `* ${skill.category}: ${skillItems}  \n`;
                 content += `***Justification: ${skill.justification_for_changes}***\n\n`;
             });
         }
@@ -33,7 +33,7 @@ export const generateChangeReport = (response) => {
             content += `### Role: ${project.role}\n\n`;
             content += `### Status: ${project.status}\n\n`;
             project.description.forEach((desc) => {
-                content += `* ${desc.text}\n`;
+                content += `* ${desc.text}  \n`;
                 content += `***Justification: ${desc.justification_for_change}***\n\n`;
             });
         });
