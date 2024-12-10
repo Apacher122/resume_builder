@@ -39,4 +39,6 @@ You can view the template here: https://github.com/posquit0/Awesome-CV
 
 ## TODO
 1. Add functionality to showcase relevant skills on resume.
-2. Don't cry.
+2. Add functionality to showcase relevant projects on resume.
+3. Add functionality to showcase relevant courses taken on resume.
+4. Don't cry.
