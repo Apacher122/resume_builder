@@ -1,7 +1,7 @@
-import { exec, spawn } from 'child_process';
+import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { optimizeExperience } from "./latexEditor.js"
+import { optimizeExperience, optimizeSkills } from "./latex-editor.js"
 import fs from 'fs';
 import { logger } from './logger.js';
 
@@ -19,22 +19,21 @@ export const compile_resume = async () => {
   // Path to your .tex file
   const texFilePath = validatePath(path.join(__dirname, `..`, `latex`, `resume.tex`));
   const outputDir = validatePath(path.join(__dirname, `..`, `output`));
-  const logDir = validatePath(path.join(__dirname, `..`, `logs`));
-  
-  // Purge logs and temporary files
-  cleanup(outputDir, logDir);
-  
+
+  // Purge old temporary files and logs
+  cleanup(outputDir);
+
   try {
     await optimizeExperience();
-    // await optimizeSkills();
+    await optimizeSkills();
   } catch (error) {
-    console.error(`Error optimizing resume: ${error.message}`);
+    console.error(`Error optimizing resume: ${error.message}\nSee logs for more information`);
     return;
   }
 
   // Execute the LaTeX command
   return new Promise((resolve, reject) => {
-    console.log(`Starting compilation`)
+    logger.info(`Starting compilation`);
 
     const latex = spawn('xelatex', [
       `--interaction=nonstopmode`,
@@ -43,34 +42,32 @@ export const compile_resume = async () => {
     ]);
 
     latex.stdout.on('data', (data) => {
-      logger.verbose(data.toString());
+      logger.info(data.toString());
     });
 
     latex.stderr.on('data', (data) => {
-      logger.error(data.toString());
+      logger.error(`LaTeX Error: ${data.toString()}`);
     });
 
     latex.on('close', (code) => {
       if (code === 0) {
+        logger.info('Compilation successful');
         resolve();
       } else {
-        reject(new Error(`Process exited with code ${code}`));
+        reject(new Error(`LaTeX process exited with code ${code}`));
       }
     });
   });
 };
 
-const cleanup = (outputDir, logDir) => {
-  // Remove old logs
-  const oldLogs = fs.readdirSync(logDir);
-  oldLogs.forEach(log => {
-    const logPath = path.join(logDir, log);
-    if (fs.statSync(logPath).isFile()) {
-      fs.unlinkSync(logPath);
-    }
-  });
+const cleanup = (outputDir) => {
+  // Clean up old change report
+  const changeReport = path.join(__dirname, `..`, `output/change-summary.md`);
+  if (fs.existsSync(changeReport)) {
+    fs.truncateSync(changeReport, 0);
+  }
 
-  // Clean up temporary files
+  // Clean up temporary files 
   const extensions = ['.aux', '.log', '.out'];
   extensions.forEach(ext => {
     const tempFile = path.join(outputDir, `resume${ext}`);
@@ -78,4 +75,5 @@ const cleanup = (outputDir, logDir) => {
       fs.unlinkSync(tempFile);
     }
   });
+  logger.info('Temporary LaTeX files purged');
 };

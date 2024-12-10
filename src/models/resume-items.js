@@ -19,9 +19,15 @@ export const experienceResponse = z.object({
 });
 
 export const skillsResponse = z.object({
-    category: z.array(
+    skills: z.array(
         z.object({
-            skill: z.array(z.string),
+            category: z.string(),
+            skill: z.array(
+                z.object({
+                    item: z.string()
+                })
+            ),
+            justification_for_changes: z.string(),
         })
     ),
 });
