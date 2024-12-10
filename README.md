@@ -28,3 +28,5 @@ This thing requires an OpenAI API key, which does cost some money. Money that on
     docker compose build
     docker compose up
     ```
+
+Any changes made to your resume will be explained under /logs/info.log
