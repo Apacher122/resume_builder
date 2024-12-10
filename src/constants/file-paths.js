@@ -5,7 +5,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const latexFilesPath = path.join(__dirname, `..`, `latex`, `resume`);
 
 export const FILE_PATHS = {
-    RESUME_JSON: path.resolve(__dirname, `../../data/resume.json`),
+    RESUME_DATA: path.resolve(__dirname, `../../data/resume.json`),
     JOB_POSTING: path.resolve(__dirname, `../../data/jobPosting.txt`),
     LOG_FILE: path.resolve(__dirname, `../logs/info.log`),
     ERROR_LOG_FILE: path.resolve(__dirname, `../logs/error.log`),

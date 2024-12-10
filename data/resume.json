@@ -124,6 +124,18 @@
           "Utilized Docker to build and deploy microservices to AWS EC2",
           "Developed a User microservice to manage and process new/existing user profiles using an AWS MySQL RDB"
         ]
+      },
+      {
+        "name": "Resume Optimization and Compilation Tool",
+        "role": "Individual Developer",
+        "status": "In active development",
+        "description": [
+          "This project is a resume optimization tool designed to tailor resumes for specific job applications. The tool leverages OpenAI's API to analyze and adjust the content of a resume to better match job descriptions, ensuring that the resume is optimized for Applicant Tracking Systems (ATS). The project is built using Node.js, Docker, and LaTeX for generating and compiling the resume.",
+          "Project Overview: The resume optimization tool is designed to help job seekers tailor their resumes to specific job postings. It automates the process of modifying resume content to highlight relevant skills, experiences, and projects that align with the job description. The tool ensures that the resume is ATS-friendly, increasing the chances of passing initial screenings.",
+          "Key Features: 1. Resume Content Optimization: Analyzes the job description and the user's existing resume. Adjusts the resume content to better match the job requirements. Provides justifications for each change made to the resume. 2 LaTeX Compilation: Uses LaTeX to format and compile the resume into a PDF. Ensures a professional and consistent layout for the resume. 3 Change Reporting: Generates a change summary report detailing the modifications made to the resume. Logs the changes for transparency and review. 4 Docker Integration: Utilizes Docker for containerized deployment, ensuring a consistent environment for running the tool. Simplifies the setup process and dependency management.",
+          "Technical Details: 1. Backend: Built with Node.js for handling the core logic and API interactions. Uses the child_process module to execute LaTeX commands for compiling the resume. 2. File Management: Reads and writes LaTeX files to update resume sections such as experience, skills, and projects. Cleans up temporary files and logs to maintain a tidy workspace. 3. Error Handling: Implements custom error classes for handling specific errors related to LaTeX file access and resume section not found. 4. Logging: Uses a logger to record important events and errors during the resume optimization and compilation process.",
+          "Workflow 1. Input: The user provides their resume in JSON format and the job description. The tool reads these inputs and prepares them for processing. 2. Optimization: The tool sends the resume and job description to OpenAI's API for analysis. Receives a response with suggested changes and justifications. 3. Compilation: Updates the LaTeX files with the new content. Compiles the LaTeX files into a PDF using xelatex. 4. Output: Generates a change summary report. Outputs the optimized resume PDF and logs the changes."
+        ]
       }
     ]
 }

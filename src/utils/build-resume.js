@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { optimizeExperience, optimizeProjects, optimizeSkills } from "./latex-editor.js"
+import { optimizeResume } from "./latex-editor.js"
 import fs from 'fs';
 import { logger } from './logger.js';
 import { makeSinglePage } from '../helpers/resume-pdf-formatter.js';
@@ -25,10 +25,7 @@ export const compile_resume = async () => {
   cleanup(outputDir);
 
   try {
-    await optimizeExperience();
-    await optimizeSkills();
-    await optimizeProjects();
-
+    await optimizeResume();
   } catch (error) {
     console.error(`Error optimizing resume: ${error.message}\nSee logs for more information`);
     return;
