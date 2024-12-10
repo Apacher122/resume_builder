@@ -1,5 +1,15 @@
 import winston from "winston";
+import path, { format } from "path";
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 
+// Truncate the log file
+const logFilePath = '../logs/info.log';
+fs.truncate(logFilePath, 0, () => {
+  console.log('Log file cleared');
+});
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const logConfig = {
     level: {
         error: 0,
@@ -10,39 +20,23 @@ const logConfig = {
         debug: 5,
         silly: 6
     },
-    format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.printf(
-            ({timestamp, level, message}) => `${timestamp} ${level.toUpperCase()}: \n${message}`
-        )
-    ),
     transports: [
         new winston.transports.File({ 
-            filename: "../logs/error.log",
-            level: "error"
+            filename: path.resolve(__dirname, "../logs/error.log"),
+            level: "error",
+            format: winston.format.combine(
+                winston.format.errors({ stack: true }),
+            )
         }),
     
         new winston.transports.File({
-            filename: "../logs/info.log",
-            level: "info"
+            filename: path.resolve(__dirname, "../logs/info.log"),
+            level: "info",
+            format: winston.format.combine(
+                winston.format.printf(({timestamp, level, message}) => `${message}`)
+            )
         }),
-
-        new winston.transports.File({
-            filename: "../logs/latex.log",
-            level: "verbose"
-        })
     ]
 };
 
 export const logger = winston.createLogger(logConfig);
-
-export const generateLog = ({ position, company, start, end, description }) => {
-    const cvItems = description
-    .map(
-      ({ text, justification_for_change }) =>
-        `\n\t\tDescription: ${text}\n\t\tJustification: ${justification_for_change}`
-    )
-    .join("\n");
-  
-    return `\nPosition: ${position.replace(/^,/g, "").trim()}\nCompany: ${company.trim()}${cvItems}\n\n`;
-};
