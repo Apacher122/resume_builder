@@ -10,7 +10,8 @@ I'm working on this tool for my own job search to help me optimize my resume for
 - Things this doohickey doesn't:
     1. Lie for you. I designed this tool to specifically use information you provided. If you mentioned nothing about fight club, it shouldn't say anything about fight club. This is simply a tool to help streamline having to constantly edit your resume. Use good judgement, measure twice, cut once, do your taxes, fold your laundry, and do better.
 
-This thing requires an OpenAI API key, which does cost some money. Money that only a job can give you :/
+This thing requires an OpenAI API key, which does cost some money. Money that only a job can give you :/  
+There's probably other LLM's I can use that are free. I'll find them someday or make my own - which ever comes first.
 
 ## **Instructions:**
 *Requirements: OpenAI API key, Docker, Node.JS*
