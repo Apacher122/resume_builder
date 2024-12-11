@@ -23,9 +23,9 @@ export const compile_resume = async () => {
 
   // Purge old temporary files and logs
   cleanup(outputDir);
-
+  let companyName;
   try {
-    await optimizeResume();
+    companyName = await optimizeResume();
   } catch (error) {
     console.error(`Error optimizing resume: ${error.message}\nSee logs for more information`);
     return;
@@ -38,6 +38,7 @@ export const compile_resume = async () => {
     const latex = spawn('xelatex', [
       `--interaction=nonstopmode`,
       `-output-directory=${outputDir}`,
+      `--jobname=${companyName}_resume`,
       texFilePath
     ]);
 
@@ -51,7 +52,7 @@ export const compile_resume = async () => {
 
     latex.on('close', async(code) => {
       if (code === 0) {
-        await makeSinglePage();
+        await makeSinglePage(companyName);
         console.log("Resume compilation successful.\nTo view information about changes, check /output/change-summary.md");
         logger.info('Compilation successful');
         resolve();
@@ -70,13 +71,23 @@ const cleanup = (outputDir) => {
     fs.truncateSync(changeReport, 0);
   }
 
-  // Clean up temporary files 
-  const extensions = ['.aux', '.log', '.out'];
-  extensions.forEach(ext => {
-    const tempFile = path.join(outputDir, `resume${ext}`);
-    if (fs.existsSync(tempFile)) {
-      fs.unlinkSync(tempFile);
+  // Clean up temporary files and old PDFs
+  const extensions = ['.aux', '.log', '.out', `.pdf`];
+  const files = fs.readdirSync(outputDir);
+
+  files.forEach(file => {
+    const filePath = path.join(outputDir, file);
+    if (fs.existsSync(filePath) && extensions.includes(path.extname(file))) {
+      fs.unlinkSync(filePath);
     }
-  });
+  })
   logger.info('Temporary LaTeX files purged');
+
+  // extensions.forEach(ext => {
+  //   const tempFile = path.join(outputDir, `resume${ext}`);
+  //   if (fs.existsSync(tempFile)) {
+  //     fs.unlinkSync(tempFile);
+  //   }
+  // });
+  // logger.info('Temporary LaTeX files purged');
 };

@@ -10,7 +10,7 @@ export const FILE_PATHS = {
     LOG_FILE: path.resolve(__dirname, `../logs/info.log`),
     ERROR_LOG_FILE: path.resolve(__dirname, `../logs/error.log`),
     CHANGE_REPORT: path.resolve(__dirname, `../../output/change-summary.md`),
-    COMPILED_RESUME: path.resolve(__dirname, `../../output/resume.pdf`),
+    COMPILED_RESUME: (title = '') => path.resolve(__dirname, `../../output/${title}_resume.pdf`),
 }
 
 export const LATEX_FILES = {

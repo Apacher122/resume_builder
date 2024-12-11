@@ -2,9 +2,9 @@ import fs from 'fs';
 import { PDFDocument } from 'pdf-lib';
 import { FILE_PATHS } from '../constants/file-paths.js';
 
-export const makeSinglePage = async() => {
+export const makeSinglePage = async(companyName) => {
     // Read the input PDF file into a buffer
-    const existingPdfBytes = fs.readFileSync(FILE_PATHS.COMPILED_RESUME);
+    const existingPdfBytes = fs.readFileSync(FILE_PATHS.COMPILED_RESUME(companyName));
   
     // Load the existing PDF into pdf-lib
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
@@ -21,6 +21,6 @@ export const makeSinglePage = async() => {
     const pdfBytes = await pdfDoc.save();
   
     // Write the modified PDF back to the same file
-    fs.writeFileSync(FILE_PATHS.COMPILED_RESUME, pdfBytes);
-    console.log(`PDF updated and saved to ${FILE_PATHS.COMPILED_RESUME}`);
+    fs.writeFileSync(FILE_PATHS.COMPILED_RESUME(companyName), pdfBytes);
+    console.log(`PDF updated and saved to ${FILE_PATHS.COMPILED_RESUME(companyName)}`);
 };

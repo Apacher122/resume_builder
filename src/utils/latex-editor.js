@@ -12,7 +12,7 @@ import { getJobPostingContent, getCurrentResumeContent } from '../helpers/info-h
 
 
 export const optimizeResume = async() => {
-  const jobPostingContent = await getJobPostingContent();
+  const {jobPostingContent, companyName} = await getJobPostingContent();
   const curResumeData = await getCurrentResumeContent(true);
 
   try {
@@ -43,7 +43,7 @@ export const optimizeResume = async() => {
     logger.error(`Error optimizing resume: ${error.message}\nSee logs for more information`);
     throw error;
   }
-
+  return companyName;
 }
 
 const processSection = async(section, prompt, schema, filePath, replaceFunction) => {

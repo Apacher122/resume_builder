@@ -32,7 +32,13 @@ export const getJobPostingContent = async (isJson = false) => {
 
     try {
         const jobPostingContent = await fsPromises.readFile(FILE_PATHS.JOB_POSTING, 'utf-8');
-        return jobPostingContent;
+        const temp = jobPostingContent.match(/Company:\s*(.+)/);
+        let companyName = temp ? temp[1] : '';
+        // Format the company name: replace spaces with underscores and convert to lowercase
+        if (companyName) {
+            companyName = companyName.replace(/\s+/g, '_').toLowerCase();
+        }
+        return {jobPostingContent, companyName};
     } catch (error) {
         console.error(`Error reading job posting: ${error.message}`);
         throw error;
